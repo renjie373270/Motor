@@ -94,8 +94,40 @@ void PendSV_Handler(void)
   * @param  None
   * @retval None
   */
-void SysTick_Handler(void){
-    sysTickCountDown--;
+void SysTick_Handler(void){    
+		if(sysTickCountDown > 0) sysTickCountDown --;
+		if(sysTickCountDownForEncoder > 0) sysTickCountDownForEncoder--;    
+}
+
+void EXTI4_15_IRQHandler(void) {
+    //按下
+    if(EXTI_GetITStatus(EXTI_Line4) != RESET) {
+        EXTI_ClearITPendingBit(EXTI_Line4);
+        position1Confirm = TRUE;
+        while (!EncoderKey()) {
+            delayInMilliSecondsForEncoder(10);
+        }
+    }
+
+    //顺时针拧
+    if((EXTI_GetITStatus(EXTI_Line5) != RESET) && (EXTI_GetITStatus(EXTI_Line6) == RESET)) {
+        EXTI_ClearITPendingBit(EXTI_Line5);
+        position1 ++;
+        while (!EncoderA() || !EncoderB()) {
+            delayInMilliSecondsForEncoder(10);
+        }
+        EXTI_ClearITPendingBit(EXTI_Line6);
+    }
+
+    //逆时针拧
+    if((EXTI_GetITStatus(EXTI_Line5) == RESET) && (EXTI_GetITStatus(EXTI_Line6) != RESET)) {
+        EXTI_ClearITPendingBit(EXTI_Line6);
+        position1--;
+        while (!EncoderA() || !EncoderB()) {
+            delayInMilliSecondsForEncoder(10);
+        }
+        EXTI_ClearITPendingBit(EXTI_Line5);
+    }
 }
 
 

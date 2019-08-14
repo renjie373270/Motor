@@ -3,13 +3,12 @@
 //
 
 #include "motor.h"
+#include "math.h"
 
 
-//转子当前位置
-#define STEP_1 1
-#define STEP_2 2
-#define STEP_3 3
-#define STEP_4 4
+//当前位置
+int position1 = 0;
+uint8_t position1Confirm = FALSE;
 
 //A1代表A+, A2代表A-
 #define A1_TO_A2()  GPIO_SetBits(GPIOA, GPIO_Pin_0); GPIO_ResetBits(GPIOA, GPIO_Pin_1); delayInMilliSeconds(5)
@@ -20,7 +19,6 @@
 #define B2_TO_B1()  GPIO_SetBits(GPIOA, GPIO_Pin_3); GPIO_ResetBits(GPIOA, GPIO_Pin_2); delayInMilliSeconds(5)
 #define B_Off()   GPIO_SetBits(GPIOA, GPIO_Pin_2); GPIO_SetBits(GPIOA, GPIO_Pin_3);     delayInMilliSeconds(5)
 
-uint8_t currentStep = STEP_4;
 
 /**
  * 初始化步进电机相关IO口
@@ -93,3 +91,20 @@ void reverseMotor(float degrees) {
     B_Off();
 }
 
+/**
+ * 电机状态更新
+ * */
+ void updateMotorPosition() {
+    if(position1Confirm == TRUE) {
+        if(position1 > 0) {
+            forwardMotor(position1 * 1.0);
+        }
+        if(position1 < 0) {
+            reverseMotor(-position1 * 1.0);
+        }
+        position1Confirm = FALSE;
+        position1 = 0;
+    }
+ }
+
+ 

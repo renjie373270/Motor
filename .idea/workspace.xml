@@ -9,7 +9,23 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b24b76b7-4d3d-4053-b234-cbd889ed7a77" name="Default Changelist" comment="" />
+    <list default="true" id="b24b76b7-4d3d-4053-b234-cbd889ed7a77" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mylib/encoder.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mylib/encoder.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE/core_cm0.h" beforeDir="false" afterPath="$PROJECT_DIR$/CORE/core_cm0.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motor.uvguix.Steven" beforeDir="false" afterPath="$PROJECT_DIR$/motor.uvguix.Steven" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motor.uvoptx" beforeDir="false" afterPath="$PROJECT_DIR$/motor.uvoptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motor.uvprojx" beforeDir="false" afterPath="$PROJECT_DIR$/motor.uvprojx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mylib/delay.c" beforeDir="false" afterPath="$PROJECT_DIR$/mylib/delay.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mylib/delay.h" beforeDir="false" afterPath="$PROJECT_DIR$/mylib/delay.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mylib/motor.c" beforeDir="false" afterPath="$PROJECT_DIR$/mylib/motor.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mylib/motor.h" beforeDir="false" afterPath="$PROJECT_DIR$/mylib/motor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/user/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/user/main.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/stm32f0xx_it.c" beforeDir="false" afterPath="$PROJECT_DIR$/user/stm32f0xx_it.c" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,12 +36,30 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mylib/delay.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="24" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="24" />
+            <state relative-caret-position="394">
+              <caret line="20" selection-start-line="20" selection-end-line="20" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylib/delay.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/user/stm32f0xx_it.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="769">
+              <caret line="128" column="43" selection-start-line="128" selection-start-column="43" selection-end-line="128" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -33,17 +67,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="350">
+              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mylib/motor.c">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="644">
+              <caret line="104" column="33" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user/main.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylib/motor.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylib/encoder.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylib/encoder.h">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -52,26 +122,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>10</find>
-      <find>double</find>
-      <find>float32_t</find>
-      <find>30</find>
-      <find>50</find>
-      <find>GPIO_Speed_50MHz</find>
-      <find>2000</find>
-      <find>B1_B2_Off</find>
-      <find>()()</find>
-      <find>SysTick_CLKSourceConfig</find>
-      <find>1000</find>
-      <find>SysTick_GetFlagStatus</find>
-      <find>SysTick</find>
-      <find>sys</find>
-      <find>16000</find>
-      <find>SystemInit</find>
-      <find>SysTick_Config</find>
-      <find>SysTick_CLKSource_HCLK</find>
-      <find>SystemCoreClock</find>
-      <find>16000000</find>
       <find>HSE_Value</find>
       <find>HSE_VALUE</find>
       <find>SetSysClock</find>
@@ -82,6 +132,26 @@
       <find>RCC_PLLMul_6</find>
       <find>RCC_PLLMul_2</find>
       <find>RCC_CFGR_PLLMULL2</find>
+      <find>GPIO_PuPd_UP</find>
+      <find>GPIO_Speed_Level_2</find>
+      <find>EXTI4_15_IRQn</find>
+      <find>EXTI_PinSource7</find>
+      <find>SYSCFG_EXTILineConfig</find>
+      <find>EXTI_Line</find>
+      <find>EXTI_InitStruct</find>
+      <find>EXTI_InitTypeDef</find>
+      <find>EXTI_Line7</find>
+      <find>4_15</find>
+      <find>EXTI_GetITStatus</find>
+      <find>EXTI_Line4</find>
+      <find>EXTI</find>
+      <find>initEncoder</find>
+      <find>SysTick_Config</find>
+      <find>__NVIC_PRIO_BITS</find>
+      <find>typedef uint</find>
+      <find>uint32_t</find>
+      <find>FALSE</find>
+      <find>GPIO_ReadInputDataBit</find>
     </findStrings>
     <replaceStrings>
       <replace>gpio</replace>
@@ -100,22 +170,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/user/stm32f0xx_conf.h" />
-        <option value="$PROJECT_DIR$/mylib/motor.h" />
-        <option value="$PROJECT_DIR$/user/main.h" />
-        <option value="$PROJECT_DIR$/mylib/delay.h" />
         <option value="$PROJECT_DIR$/user/stm32f0xx_it.h" />
-        <option value="$PROJECT_DIR$/user/stm32f0xx_it.c" />
-        <option value="$PROJECT_DIR$/mylib/delay.c" />
         <option value="$PROJECT_DIR$/user/system_stm32f0xx.c" />
+        <option value="$PROJECT_DIR$/mylib/encoder.c" />
+        <option value="$PROJECT_DIR$/CORE/core_cm0.h" />
+        <option value="$PROJECT_DIR$/user/main.h" />
         <option value="$PROJECT_DIR$/user/main.c" />
+        <option value="$PROJECT_DIR$/mylib/motor.h" />
         <option value="$PROJECT_DIR$/mylib/motor.c" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/mylib/delay.c" />
+        <option value="$PROJECT_DIR$/mylib/delay.h" />
+        <option value="$PROJECT_DIR$/mylib/encoder.h" />
+        <option value="$PROJECT_DIR$/user/stm32f0xx_it.c" />
       </list>
     </option>
   </component>
@@ -130,7 +196,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -141,7 +206,7 @@
             <path>
               <item name="motor" type="b2602c69:ProjectViewProjectNode" />
               <item name="motor" type="462c0819:PsiDirectoryNode" />
-              <item name="FWlib" type="462c0819:PsiDirectoryNode" />
+              <item name="mylib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="motor" type="b2602c69:ProjectViewProjectNode" />
@@ -152,9 +217,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/user" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -190,24 +257,20 @@
       <option name="presentableId" value="Default" />
       <updated>1565753512006</updated>
       <workItem from="1565753513210" duration="18120000" />
+      <workItem from="1565772379024" duration="4882000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18120000" />
+    <option name="totallyTimeSpent" value="23002000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="SonarQube" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.329718" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -215,10 +278,15 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="SonarQube" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,20 +296,8 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/QN8036.C">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/I2C.H">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="20" selection-start-line="20" selection-end-line="20" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/user/QN8036.C" />
+    <entry file="file://$PROJECT_DIR$/user/I2C.H" />
     <entry file="file://$PROJECT_DIR$/FWlib/src/stm32f0xx_rtc.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -263,20 +319,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/main.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylib/motor.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user/stm32f0xx_it.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
@@ -284,31 +326,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/stm32f0xx_it.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="97" column="20" selection-start-line="97" selection-start-column="20" selection-end-line="97" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CORE/core_cm0.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2191">
-          <caret line="638" column="25" selection-start-line="638" selection-start-column="25" selection-end-line="638" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FWlib/src/stm32f0xx_misc.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="141" column="28" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylib/delay.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -344,24 +365,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/main.c">
+    <entry file="file://$PROJECT_DIR$/FWlib/inc/stm32f0xx_gpio.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="273">
+          <caret line="301" column="8" lean-forward="true" selection-start-line="301" selection-start-column="8" selection-end-line="301" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mylib/delay.c">
+    <entry file="file://$PROJECT_DIR$/FWlib/inc/stm32f0xx_exti.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="24" />
+        <state relative-caret-position="50">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/stm32f0xx.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE/core_cm0.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="644" column="45" selection-start-line="644" selection-start-column="45" selection-end-line="644" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mylib/motor.c">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="104" column="33" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylib/delay.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="20" selection-start-line="20" selection-end-line="20" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylib/delay.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/main.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylib/motor.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylib/encoder.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FWlib/src/stm32f0xx_gpio.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="282" column="29" selection-start-line="282" selection-start-column="8" selection-end-line="282" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylib/encoder.h">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/stm32f0xx_it.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="769">
+          <caret line="128" column="43" selection-start-line="128" selection-start-column="43" selection-end-line="128" selection-end-column="43" />
         </state>
       </provider>
     </entry>

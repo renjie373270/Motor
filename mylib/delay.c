@@ -5,12 +5,21 @@
 #include "delay.h"
 
 uint32_t sysTickCountDown = 0;
+uint32_t sysTickCountDownForEncoder = 0;
 
 /**
  * ∫¡√Î—” ±
  * */
 void delayInMilliSeconds(uint32_t x) {
     sysTickCountDown = x;
+    while (sysTickCountDown != 0);
+}
+
+/**
+ * ∫¡√Î—” ±
+ * */
+void delayInMilliSecondsForEncoder(uint32_t x) {
+    sysTickCountDownForEncoder = x;
     while (sysTickCountDown != 0);
 }
 

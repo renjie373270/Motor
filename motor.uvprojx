@@ -397,19 +397,14 @@
               <FilePath>.\FWlib\src\stm32f0xx_misc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f0xx_tim.c</FileName>
+              <FileName>stm32f0xx_syscfg.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\FWlib\src\stm32f0xx_tim.c</FilePath>
+              <FilePath>.\FWlib\src\stm32f0xx_syscfg.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f0xx_usart.c</FileName>
+              <FileName>stm32f0xx_exti.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\FWlib\src\stm32f0xx_usart.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f0xx_flash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\FWlib\src\stm32f0xx_flash.c</FilePath>
+              <FilePath>.\FWlib\src\stm32f0xx_exti.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -425,6 +420,11 @@
               <FileName>delay.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\mylib\delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>encoder.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\mylib\encoder.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -3,12 +3,27 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="$PROJECT_DIR$/CORE/core_cm0.h">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/mylib/delay.c">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/mylib/delay.h">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/mylib/encoder.c">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/mylib/encoder.h">
           <value>
             <set />
           </value>
