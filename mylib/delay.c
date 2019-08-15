@@ -4,25 +4,12 @@
 
 #include "delay.h"
 
-uint32_t sysTickCountDown = 0;
-uint32_t sysTickCountDownForEncoder = 0;
-
 /**
  * 毫秒延时
  * */
 void delayInMilliSeconds(uint32_t x) {
-    sysTickCountDown = x;
-    while (sysTickCountDown != 0);
+    vTaskDelay(x);
 }
-
-/**
- * 毫秒延时
- * */
-void delayInMilliSecondsForEncoder(uint32_t x) {
-    sysTickCountDownForEncoder = x;
-    while (sysTickCountDown != 0);
-}
-
 
 /**
  * 系统定时器初始化

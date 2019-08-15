@@ -71,33 +71,6 @@ void HardFault_Handler(void)
   }
 }
 
-/**
-  * @brief  This function handles SVCall exception.
-  * @param  None
-  * @retval None
-  */
-void SVC_Handler(void)
-{
-}
-
-/**
-  * @brief  This function handles PendSVC exception.
-  * @param  None
-  * @retval None
-  */
-void PendSV_Handler(void)
-{
-}
-
-/**
-  * @brief  This function handles SysTick Handler.
-  * @param  None
-  * @retval None
-  */
-void SysTick_Handler(void){    
-		if(sysTickCountDown > 0) sysTickCountDown --;
-		if(sysTickCountDownForEncoder > 0) sysTickCountDownForEncoder--;    
-}
 
 void EXTI4_15_IRQHandler(void) {
     //°´ÏÂ
@@ -105,7 +78,7 @@ void EXTI4_15_IRQHandler(void) {
         EXTI_ClearITPendingBit(EXTI_Line4);
         position1Confirm = TRUE;
         while (!EncoderKey()) {
-            delayInMilliSecondsForEncoder(10);
+            delayInMilliSeconds(10);
         }
     }
 
@@ -114,7 +87,7 @@ void EXTI4_15_IRQHandler(void) {
         EXTI_ClearITPendingBit(EXTI_Line5);
         position1 ++;
         while (!EncoderA() || !EncoderB()) {
-            delayInMilliSecondsForEncoder(10);
+            delayInMilliSeconds(10);
         }
         EXTI_ClearITPendingBit(EXTI_Line6);
     }
@@ -124,42 +97,40 @@ void EXTI4_15_IRQHandler(void) {
         EXTI_ClearITPendingBit(EXTI_Line6);
         position1--;
         while (!EncoderA() || !EncoderB()) {
-            delayInMilliSecondsForEncoder(10);
+            delayInMilliSeconds(10);
         }
         EXTI_ClearITPendingBit(EXTI_Line5);
     }
 }
 
 
-/*
-
-*/
-void USART1_IRQHandler(void)
-{		
-}
-
-/******************************************************************************/
-/*                 STM32F0xx Peripherals Interrupt Handlers                   */
-/*  Add here the Interrupt Handler for the used peripheral(s) (PPP), for the  */
-/*  available peripheral interrupt handler's name please refer to the startup */
-/*  file (startup_stm32f0xx.s).                                               */
-/******************************************************************************/
-
-/**
-  * @brief  This function handles PPP interrupt request.
-  * @param  None
-  * @retval None
-  */
-/*void PPP_IRQHandler(void)
-{
-}*/
-
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+void WWDG_IRQHandler(void){}
+void PVD_IRQHandler(void){}
+void RTC_IRQHandler(void){}
+void FLASH_IRQHandler(void){}
+void RCC_IRQHandler(void){}
+void EXTI0_1_IRQHandler(void){}
+void EXTI2_3_IRQHandler(void){}
+//void EXTI4_15_IRQHandler(void){}
+void TS_IRQHandler(void){}
+void DMA1_Channel1_IRQHandler(void){}
+void DMA1_Channel2_3_IRQHandler(void){}
+void DMA1_Channel4_5_IRQHandler(void){}
+void ADC1_COMP_IRQHandler(void){}
+void TIM1_BRK_UP_TRG_COM_IRQHandler(void){}
+void TIM1_CC_IRQHandler(void){}
+void TIM2_IRQHandler(void){}
+void TIM3_IRQHandler(void){}
+void TIM6_DAC_IRQHandler(void){}
+void TIM14_IRQHandler(void){}
+void TIM15_IRQHandler(void){}
+void TIM16_IRQHandler(void){}
+void TIM17_IRQHandler(void){}
+void I2C1_IRQHandler(void){}
+void I2C2_IRQHandler(void){}
+void SPI1_IRQHandler(void){}
+void SPI2_IRQHandler(void){}
+void USART1_IRQHandler(void){}
+void USART2_IRQHandler(void){}
+void CEC_IRQHandler(void){}
+	

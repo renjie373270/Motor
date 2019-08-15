@@ -2,13 +2,5 @@
 *.scvd
 *.lst
 *.map
-*.crf
-*.d
-*.o
-*.htm
-*.lnp
-*.sct
-*.dep
-*.axf
-*.iex
-*.TMP
+/Objects
+*.Steven
