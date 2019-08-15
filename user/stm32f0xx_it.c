@@ -73,27 +73,7 @@ void HardFault_Handler(void)
 
 
 void EXTI4_15_IRQHandler(void) {
-    //°´ÏÂ
-    if(EXTI_GetITStatus(EXTI_Line4) != RESET) {
-        EXTI_ClearITPendingBit(EXTI_Line4);
-        position1Confirm = TRUE;
-    }
-
-    //Ë³Å¡
-    if(EXTI_GetITStatus(EXTI_Line5) != RESET) {
-        EXTI_ClearITPendingBit(EXTI_Line5);
-        if(!EncoderA() && EncoderB()) {
-            position1 ++;
-        }
-    }
-
-    //·´Å¡
-    if(EXTI_GetITStatus(EXTI_Line6) != RESET) {
-        EXTI_ClearITPendingBit(EXTI_Line6);
-        if(EncoderA() && !EncoderB()) {
-            position1 --;
-        }
-    }
+    readEncoderStatus();
 }
 
 

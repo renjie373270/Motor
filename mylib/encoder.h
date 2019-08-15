@@ -12,5 +12,6 @@
 #define EncoderB()   GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_6)
 
 void initEncoder(void);
+void readEncoderStatus(void);
 
 #endif //MOTOR_ENCODER_H

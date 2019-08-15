@@ -48,6 +48,33 @@ void initEncoderEXTI() {
 }
 
 /**
+ * 检测编码器转动方向和角度
+ * */
+void readEncoderStatus() {
+    //按下
+    if(EXTI_GetITStatus(EXTI_Line4) != RESET) {
+        EXTI_ClearITPendingBit(EXTI_Line4);
+        position1Confirm = TRUE;
+    }
+
+    //顺拧
+    if(EXTI_GetITStatus(EXTI_Line5) != RESET) {
+        EXTI_ClearITPendingBit(EXTI_Line5);
+        if(!EncoderA() && EncoderB()) {
+            position1 ++;
+        }
+    }
+
+    //反拧
+    if(EXTI_GetITStatus(EXTI_Line6) != RESET) {
+        EXTI_ClearITPendingBit(EXTI_Line6);
+        if(EncoderA() && !EncoderB()) {
+            position1 --;
+        }
+    }
+}
+
+/**
  * 初始化编码器相关配置
  * */
 void initEncoder() {
