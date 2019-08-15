@@ -8,6 +8,8 @@ void initAllDevices() {
     SystemInit();
     delayInit();
     ledInit();
+    initMotorGPIO();
+    initEncoder();
 }
 
 /**
@@ -27,24 +29,24 @@ static void LedTask(void *parameter) {
  * */
 static void MotorTask(void *parameter) {
     while (1) {
-
+        updateMotorPosition();
     }
 }
 
 /**
  * 看门狗任务
  * */
- static void WatchDogTask(void *parameter) {
-     while (1) {
+static void WatchDogTask(void *parameter) {
+    while (1) {
 
-     }
- }
+    }
+}
 
 int main(void) {
     initAllDevices();
-    xTaskCreate((TaskFunction_t )LedTask, "LedTask", 128, NULL, 200, &LEDTask_Handle);
-    xTaskCreate((TaskFunction_t )MotorTask, "MotorTask", 128, NULL, 200, &MotorTask_Handle);
-    xTaskCreate((TaskFunction_t )WatchDogTask, "WatchDogTask", 128, NULL, 200, &WatchDogTask_Handle);
+    xTaskCreate(LedTask, "LedTask", 128, NULL, 200, &LEDTask_Handle);
+    xTaskCreate(MotorTask, "MotorTask", 128, NULL, 200, &MotorTask_Handle);
+    xTaskCreate(WatchDogTask, "WatchDogTask", 128, NULL, 200, &WatchDogTask_Handle);
     vTaskStartScheduler();
     while(1);
 }

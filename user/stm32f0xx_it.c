@@ -77,29 +77,22 @@ void EXTI4_15_IRQHandler(void) {
     if(EXTI_GetITStatus(EXTI_Line4) != RESET) {
         EXTI_ClearITPendingBit(EXTI_Line4);
         position1Confirm = TRUE;
-        while (!EncoderKey()) {
-            delayInMilliSeconds(10);
+    }
+
+    //À≥≈°
+    if(EXTI_GetITStatus(EXTI_Line5) != RESET) {
+        EXTI_ClearITPendingBit(EXTI_Line5);
+        if(!EncoderA() && EncoderB()) {
+            position1 ++;
         }
     }
 
-    //À≥ ±’Î≈°
-    if((EXTI_GetITStatus(EXTI_Line5) != RESET) && (EXTI_GetITStatus(EXTI_Line6) == RESET)) {
-        EXTI_ClearITPendingBit(EXTI_Line5);
-        position1 ++;
-        while (!EncoderA() || !EncoderB()) {
-            delayInMilliSeconds(10);
-        }
+    //∑¥≈°
+    if(EXTI_GetITStatus(EXTI_Line6) != RESET) {
         EXTI_ClearITPendingBit(EXTI_Line6);
-    }
-
-    //ƒÊ ±’Î≈°
-    if((EXTI_GetITStatus(EXTI_Line5) == RESET) && (EXTI_GetITStatus(EXTI_Line6) != RESET)) {
-        EXTI_ClearITPendingBit(EXTI_Line6);
-        position1--;
-        while (!EncoderA() || !EncoderB()) {
-            delayInMilliSeconds(10);
+        if(EncoderA() && !EncoderB()) {
+            position1 --;
         }
-        EXTI_ClearITPendingBit(EXTI_Line5);
     }
 }
 
