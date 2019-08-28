@@ -1,26 +1,31 @@
 #include "main.h"
 
-static TaskHandle_t LEDTask_Handle = NULL;
+static TaskHandle_t SegTask_Handle = NULL;
 static TaskHandle_t MotorTask_Handle = NULL;
 static TaskHandle_t WatchDogTask_Handle = NULL;
 
 void initAllDevices() {
     SystemInit();
     delayInit();
-    ledInit();
+    initDisplayDevice();
     initMotorGPIO();
     initEncoder();
 }
 
 /**
- * 闪灯任务
+ * 显示任务
  * */
-static void LedTask(void *parameter) {
+static void SegTask(void *parameter) {
+    uint8_t i, shi, ge, count = 0;
     while (1) {
-        ledOn();
-        delayInMilliSeconds(200);
-        ledOff();
-        delayInMilliSeconds(200);
+        count ++;
+        if(count > 99)
+            count = 0;
+        shi = count / 10;
+        ge = count % 10;
+        i = 100;
+        while (i--)
+            display(shi, ge);
     }
 }
 
@@ -44,7 +49,7 @@ static void WatchDogTask(void *parameter) {
 
 int main(void) {
     initAllDevices();
-    xTaskCreate(LedTask, "LedTask", 128, NULL, 200, &LEDTask_Handle);
+    xTaskCreate(SegTask, "SegTask", 128, NULL, 200, &SegTask_Handle);
     xTaskCreate(MotorTask, "MotorTask", 128, NULL, 200, &MotorTask_Handle);
     xTaskCreate(WatchDogTask, "WatchDogTask", 128, NULL, 200, &WatchDogTask_Handle);
     vTaskStartScheduler();

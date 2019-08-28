@@ -432,9 +432,9 @@
               <FilePath>.\mylib\encoder.c</FilePath>
             </File>
             <File>
-              <FileName>led.c</FileName>
+              <FileName>display.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\mylib\led.c</FilePath>
+              <FilePath>.\mylib\display.c</FilePath>
             </File>
           </Files>
         </Group>

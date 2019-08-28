@@ -3,6 +3,16 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="$PROJECT_DIR$/../display/mylib/ir.c">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../display/user/stm32f10x_it.c">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/.gitignore">
           <value>
             <set />
@@ -29,6 +39,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/mylib/delay.h">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/mylib/display.c">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/mylib/display.h">
           <value>
             <set />
           </value>
@@ -94,6 +114,31 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/user/system_stm32f0xx.c">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../thermometer/FreeRTOS/include/FreeRTOS.h">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../thermometer/mylib/delay.c">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../thermometer/user/FreeRTOSConfig.h">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../thermometer/user/main.c">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../thermometer/user/stm32f10x_it.c">
           <value>
             <set />
           </value>
