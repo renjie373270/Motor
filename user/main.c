@@ -16,16 +16,19 @@ void initAllDevices() {
  * ÏÔÊ¾ÈÎÎñ
  * */
 static void SegTask(void *parameter) {
-    uint8_t i, shi, ge, count = 0;
+    int8_t num1, num2;
     while (1) {
-        count ++;
-        if(count > 99)
-            count = 0;
-        shi = count / 10;
-        ge = count % 10;
-        i = 100;
-        while (i--)
-            display(shi, ge);
+        num1 = positionArray[0];
+        num2 = positionArray[1];
+        if(num1 < 0) {
+            num1 = -num1;
+        }
+        if(num2 < 0) {
+            num2 = -num2;
+        }
+        num1 %= 10;
+        num2 %= 10;
+        display(num2, num1);
     }
 }
 
@@ -43,14 +46,14 @@ static void MotorTask(void *parameter) {
  * */
 static void WatchDogTask(void *parameter) {
     while (1) {
-
+        delayInMilliSeconds(100);
     }
 }
 
 int main(void) {
     initAllDevices();
     xTaskCreate(SegTask, "SegTask", 128, NULL, 200, &SegTask_Handle);
-    xTaskCreate(MotorTask, "MotorTask", 128, NULL, 200, &MotorTask_Handle);
+    xTaskCreate(MotorTask, "MotorTask", 256, NULL, 200, &MotorTask_Handle);
     xTaskCreate(WatchDogTask, "WatchDogTask", 128, NULL, 200, &WatchDogTask_Handle);
     vTaskStartScheduler();
     while(1);

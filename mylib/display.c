@@ -4,18 +4,6 @@
 
 #include "display.h"
 
-#define  SEG_DS_PORT GPIOA
-#define  SEG_DS_PIN  GPIO_Pin_10
-#define  SEG_DS_RCC RCC_AHBPeriph_GPIOA
-
-#define  SEG_ST_PORT GPIOA
-#define  SEG_ST_PIN  GPIO_Pin_11
-#define  SEG_ST_RCC RCC_AHBPeriph_GPIOA
-
-#define  SEG_SH_PORT GPIOA
-#define  SEG_SH_PIN  GPIO_Pin_12
-#define  SEG_SH_RCC RCC_AHBPeriph_GPIOA
-
 
 /**
  * 初始化数码管相关IO口
@@ -43,8 +31,8 @@ void initSegGPIO() {
  * 设置 74HC595 内容
  * 先发送高字节、高位
  * */
-void sendBytesTo595(uint8_t bytes[], uint8_t length) {
-    uint8_t i, j, ds, byte;
+void sendBytesToSeg595(uint8_t bytes[], uint8_t length) {
+    uint8_t i, j, byte, ds;
     for(i = 0; i < length; i++) {
         byte = bytes[length - 1 - i];
         for(j = 0; j < 8; j++) {
@@ -72,12 +60,12 @@ void display(uint8_t num1, uint8_t num2) {
 
     bytes[0] = 1 << 1;
     bytes[1] = ~segTable[num1];
-    sendBytesTo595(bytes, length);
+    sendBytesToSeg595(bytes, length);
     delayInMilliSeconds(5);
 
     bytes[0] = 1 << 2;
     bytes[1] = ~segTable[num2];
-    sendBytesTo595(bytes, length);
+    sendBytesToSeg595(bytes, length);
     delayInMilliSeconds(5);
 }
 

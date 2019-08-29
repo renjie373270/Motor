@@ -5,19 +5,14 @@
 #include "motor.h"
 #include "math.h"
 
+#define MOTOR_DELAY() delayInMilliSeconds(2)
 
-//当前位置
-int position1 = 0;
-uint8_t position1Confirm = FALSE;
+int8_t  positionArray[5] = {0, 0, 0, 0, 0};
+uint8_t confirmArray[5] = {FALSE, FALSE, FALSE, FALSE, FALSE};
 
-//A1代表A+, A2代表A-
-#define A1_TO_A2()  GPIO_SetBits(GPIOA, GPIO_Pin_0); GPIO_ResetBits(GPIOA, GPIO_Pin_1); delayInMilliSeconds(5)
-#define A2_TO_A1()  GPIO_SetBits(GPIOA, GPIO_Pin_1); GPIO_ResetBits(GPIOA, GPIO_Pin_0); delayInMilliSeconds(5)
-#define A_Off()   GPIO_SetBits(GPIOA, GPIO_Pin_0); GPIO_SetBits(GPIOA, GPIO_Pin_1);     delayInMilliSeconds(5)
-
-#define B1_TO_B2()  GPIO_SetBits(GPIOA, GPIO_Pin_2); GPIO_ResetBits(GPIOA, GPIO_Pin_3); delayInMilliSeconds(5)
-#define B2_TO_B1()  GPIO_SetBits(GPIOA, GPIO_Pin_3); GPIO_ResetBits(GPIOA, GPIO_Pin_2); delayInMilliSeconds(5)
-#define B_Off()   GPIO_SetBits(GPIOA, GPIO_Pin_2); GPIO_SetBits(GPIOA, GPIO_Pin_3);     delayInMilliSeconds(5)
+uint8_t numberOf595 = 2; //595寄存器数量
+uint8_t motorBytes[2] = {0xFF, 0xFF};
+uint8_t runTable[9] = {0x0E, 0x0A, 0x0B, 0x09, 0x0D, 0x05, 0x07, 0x06};//8拍
 
 
 /**
@@ -25,85 +20,121 @@ uint8_t position1Confirm = FALSE;
  * */
 void initMotorGPIO() {
     GPIO_InitTypeDef gpio;
-    RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA , ENABLE);
+    RCC_AHBPeriphClockCmd(MOTOR_SH_RCC | MOTOR_DS_RCC | MOTOR_ST_RCC, ENABLE);
 
-    gpio.GPIO_Pin  = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3;
     gpio.GPIO_Mode = GPIO_Mode_OUT;
     gpio.GPIO_OType= GPIO_OType_PP;
-    gpio.GPIO_Speed= GPIO_Speed_50MHz;
-    GPIO_Init(GPIOA , &gpio);
+    gpio.GPIO_Speed= GPIO_Speed_10MHz;
+
+    gpio.GPIO_Pin  = MOTOR_SH_PIN;
+    GPIO_Init(MOTOR_SH_PORT, &gpio);
+
+    gpio.GPIO_Pin  = MOTOR_DS_PIN;
+    GPIO_Init(MOTOR_DS_PORT, &gpio);
+
+    gpio.GPIO_Pin  = MOTOR_ST_PIN;
+    GPIO_Init(MOTOR_ST_PORT, &gpio);
 }
 
 /**
- * 顺时针转动
+ * 设置 74HC595 内容
+ * 先发送高字节、高位
  * */
-void forward() {
-    B1_TO_B2();//45
-    A_Off();//90
-    A2_TO_A1();//135
-    B_Off();//180
-    B2_TO_B1();//225
-    A_Off();//270
-    A1_TO_A2();//315
-    B_Off();//360
+void sendBytesToMotor595(uint8_t bytes[], uint8_t length) {
+    uint8_t i, j, byte, ds;
+    for(i = 0; i < length; i++) {
+        byte = bytes[length - 1 - i];
+        for(j = 0; j < 8; j++) {
+            ds = (byte & 0x80) > 0;
+            if(ds) {
+                GPIO_SetBits(MOTOR_DS_PORT, MOTOR_DS_PIN);
+            } else {
+                GPIO_ResetBits(MOTOR_DS_PORT, MOTOR_DS_PIN);
+            }
+            byte <<= 1;
+            GPIO_ResetBits(MOTOR_SH_PORT, MOTOR_SH_PIN);
+            GPIO_SetBits(MOTOR_SH_PORT, MOTOR_SH_PIN);
+        }
+    }
+    GPIO_ResetBits(MOTOR_ST_PORT, MOTOR_ST_PIN);
+    GPIO_SetBits(MOTOR_ST_PORT, MOTOR_ST_PIN);
 }
 
 /**
- * 逆时针转动
+ * 顺时针转动，每次一圈
  * */
-void reverse() {
-    B2_TO_B1();//315
-    A_Off();//270
-    A2_TO_A1();//225
-    B_Off();//180
-    B1_TO_B2();//135
-    A_Off();//90
-    A1_TO_A2();//45
-    B_Off();//0
+void forward(uint8_t motorIndex) {
+		uint8_t i;
+    for(i = 0; i < 8; i++) {
+        motorBytes[motorIndex] = runTable[i] << 1;
+        sendBytesToMotor595(motorBytes, numberOf595);
+        MOTOR_DELAY();
+    }
 }
+
+/**
+ * 逆时针转动，每次一圈
+ * */
+void reverse(uint8_t motorIndex) {
+	uint8_t i;
+    for(i = 0; i < 8; i++) {
+        motorBytes[motorIndex] = runTable[7 - i] << 1;
+        sendBytesToMotor595(motorBytes, numberOf595);
+        MOTOR_DELAY();
+    }
+}
+
 
 /**
  * 正向转动，输入参数为角度
  * 步距角18度，减速比1:275
  * */
-void forwardMotor(float degrees) {
+void forwardMotor(uint8_t motorIndex, int8_t *temp) {
     float stepAngle = 18 / 275.0;
+    float degrees = (*temp) * 1.0;
     uint32_t remainSteps = degrees / stepAngle;
     uint32_t circles = remainSteps / 4;
     while (circles--) {
-        forward();
+        if(circles % (*temp) == 0)
+            (*temp) --;
+        forward(motorIndex);
     }
-    A_Off();
-    B_Off();
+    motorBytes[motorIndex] = 0xFF;
+    sendBytesToMotor595(motorBytes, numberOf595);
 }
 
 /**
  * 反向转动
  * */
-void reverseMotor(float degrees) {
+void reverseMotor(uint8_t motorIndex, int8_t *temp) {
     float stepAngle = 18 / 275.0;
+    float degrees = -(*temp) * 1.0;
     uint32_t remainSteps = degrees / stepAngle;
     uint32_t circles = remainSteps / 4;
     while (circles--) {
-        reverse();
+        if(circles % (*temp) == 0)
+            (*temp) --;
+        reverse(motorIndex);
     }
-    A_Off();
-    B_Off();
+    motorBytes[motorIndex] = 0xFF;
+    sendBytesToMotor595(motorBytes, numberOf595);
 }
 
 /**
- * 电机状态更新
+ * 电机位置更新
  * */
- void updateMotorPosition() {
-    if(position1Confirm == TRUE) {
-        if(position1 > 0) {
-            forwardMotor(position1 * 1.0);
+void updateMotorPosition() {
+    uint8_t i;
+    for(i = 0; i < 5; i++) {
+        if(confirmArray[i] == TRUE) {
+            if(positionArray[i] > 0) {
+                forwardMotor(i, &positionArray[i]);
+            } else {
+                reverseMotor(i, &positionArray[i]);
+            }
+            confirmArray[i] = FALSE;
+            positionArray[i] = 0;
         }
-        if(position1 < 0) {
-            reverseMotor(-position1 * 1.0);
-        }
-        position1Confirm = FALSE;
-        position1 = 0;
     }
- }
+}
  

@@ -7,10 +7,6 @@
 
 #include "main.h"
 
-#define EncoderKey() GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_4)
-#define EncoderA()   GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_5)
-#define EncoderB()   GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_6)
-
 void initEncoder(void);
 void readEncoderStatus(void);
 
