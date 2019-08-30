@@ -13,14 +13,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/motor.uvguix.Steven" beforeDir="false" afterPath="$PROJECT_DIR$/motor.uvguix.Steven" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/motor.uvoptx" beforeDir="false" afterPath="$PROJECT_DIR$/motor.uvoptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/motor.uvprojx" beforeDir="false" afterPath="$PROJECT_DIR$/motor.uvprojx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylib/display.c" beforeDir="false" afterPath="$PROJECT_DIR$/mylib/display.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylib/display.h" beforeDir="false" afterPath="$PROJECT_DIR$/mylib/display.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mylib/encoder.c" beforeDir="false" afterPath="$PROJECT_DIR$/mylib/encoder.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylib/encoder.h" beforeDir="false" afterPath="$PROJECT_DIR$/mylib/encoder.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mylib/motor.c" beforeDir="false" afterPath="$PROJECT_DIR$/mylib/motor.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylib/motor.h" beforeDir="false" afterPath="$PROJECT_DIR$/mylib/motor.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/user/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/stm32f0xx_it.c" beforeDir="false" afterPath="$PROJECT_DIR$/user/stm32f0xx_it.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mylib/motor.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="44" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="44" />
+            <state relative-caret-position="3119">
+              <caret line="125" column="28" selection-start-line="125" selection-start-column="28" selection-end-line="125" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -51,11 +47,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mylib/encoder.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="76" column="14" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
+            <state relative-caret-position="350">
+              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/user/stm32f0xx_it.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="71" column="1" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
+              <folding>
+                <element signature="e#1316#1341#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -63,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mylib/encoder.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            <state relative-caret-position="250">
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -72,8 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="55" column="43" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
+            <state relative-caret-position="594">
+              <caret line="67" column="60" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -82,12 +90,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>INCLUDE_xTaskGetCurrentTaskHandle</find>
-      <find>SystickHandler</find>
-      <find>EXTI4_15</find>
-      <find>readEncoderStatus(</find>
-      <find>GPIO_Speed_50MHz</find>
-      <find>SH</find>
       <find>LED</find>
       <find>uchar</find>
       <find>unsigned char</find>
@@ -108,10 +110,16 @@
       <find>EncoderB</find>
       <find>EncoderKe</find>
       <find>()()</find>
-      <find>EXTI_ClearITPendingBit(</find>
       <find>EXTI_GetITStatus(</find>
       <find>xTaskCreate</find>
       <find>clear</find>
+      <find>GPIO_Speed_10MHz</find>
+      <find>EXTI4_15_IRQn</find>
+      <find>EXTI_ClearFlag</find>
+      <find>EXTI_ClearITPendingBit(</find>
+      <find>GPIO_Speed_2MHz</find>
+      <find>GPIO_Mode_IN</find>
+      <find>GPIO_PuPd_UP</find>
     </findStrings>
     <replaceStrings>
       <replace>gpio</replace>
@@ -151,15 +159,15 @@
         <option value="$PROJECT_DIR$/mylib/led.c" />
         <option value="$PROJECT_DIR$/FreeRTOS/src/tasks.c" />
         <option value="$PROJECT_DIR$/user/FreeRTOSConfig.h" />
-        <option value="$PROJECT_DIR$/user/stm32f0xx_it.c" />
         <option value="$PROJECT_DIR$/user/main.h" />
-        <option value="$PROJECT_DIR$/mylib/display.h" />
-        <option value="$PROJECT_DIR$/mylib/display.c" />
         <option value="$PROJECT_DIR$/mylib/motor.h" />
         <option value="$PROJECT_DIR$/mylib/encoder.h" />
         <option value="$PROJECT_DIR$/mylib/motor.c" />
+        <option value="$PROJECT_DIR$/mylib/display.c" />
+        <option value="$PROJECT_DIR$/mylib/display.h" />
         <option value="$PROJECT_DIR$/user/main.c" />
         <option value="$PROJECT_DIR$/mylib/encoder.c" />
+        <option value="$PROJECT_DIR$/user/stm32f0xx_it.c" />
       </list>
     </option>
   </component>
@@ -176,6 +184,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -202,7 +211,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -252,18 +260,19 @@
       <workItem from="1566530126636" duration="33000" />
       <workItem from="1566894263633" duration="4660000" />
       <workItem from="1566981374032" duration="4813000" />
-      <workItem from="1567039745951" duration="26549000" />
+      <workItem from="1567039745951" duration="26622000" />
+      <workItem from="1567125816938" duration="8417000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79854000" />
+    <option name="totallyTimeSpent" value="88344000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20255864" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20469083" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -276,7 +285,7 @@
       <window_info anchor="bottom" id="SonarQube" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32827735" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3275488" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -355,13 +364,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/stm32f0xx.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -466,13 +468,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mylib/led.c" />
-    <entry file="file://$PROJECT_DIR$/FWlib/inc/stm32f0xx_gpio.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="300" lean-forward="true" selection-start-line="300" selection-end-line="300" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user/main.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -487,31 +482,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mylib/display.h">
+    <entry file="file://$PROJECT_DIR$/user/stm32f0xx.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+        <state relative-caret-position="298">
+          <caret line="186" column="2" selection-start-line="186" selection-start-column="2" selection-end-line="186" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mylib/display.c">
+    <entry file="file://$PROJECT_DIR$/FWlib/inc/stm32f0xx_gpio.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
+        <state relative-caret-position="173">
+          <caret line="63" column="15" lean-forward="true" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FWlib/src/stm32f0xx_exti.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="299" column="10" selection-start-line="299" selection-start-column="2" selection-end-line="299" selection-end-column="10" />
+        <state relative-caret-position="298">
+          <caret line="253" selection-start-line="253" selection-end-line="254" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylib/display.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mylib/motor.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="44" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="44" />
+        <state relative-caret-position="3119">
+          <caret line="125" column="28" selection-start-line="125" selection-start-column="28" selection-end-line="125" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -524,32 +526,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mylib/encoder.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state relative-caret-position="250">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylib/display.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/user/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="55" column="43" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/stm32f0xx_it.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
-          <folding>
-            <element signature="e#1316#1341#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="594">
+          <caret line="67" column="60" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mylib/encoder.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="76" column="14" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
+        <state relative-caret-position="350">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/stm32f0xx_it.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="71" column="1" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
+          <folding>
+            <element signature="e#1316#1341#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

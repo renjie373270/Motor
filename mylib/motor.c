@@ -24,7 +24,7 @@ void initMotorGPIO() {
 
     gpio.GPIO_Mode = GPIO_Mode_OUT;
     gpio.GPIO_OType= GPIO_OType_PP;
-    gpio.GPIO_Speed= GPIO_Speed_10MHz;
+    gpio.GPIO_Speed= GPIO_Speed_2MHz;
 
     gpio.GPIO_Pin  = MOTOR_SH_PIN;
     GPIO_Init(MOTOR_SH_PORT, &gpio);

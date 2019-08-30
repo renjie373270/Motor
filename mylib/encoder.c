@@ -22,7 +22,7 @@ void initEncoderGPIO() {
     RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA | RCC_AHBPeriph_GPIOB, ENABLE);
 
     GPIO_InitStruct.GPIO_Mode = GPIO_Mode_IN;
-    GPIO_InitStruct.GPIO_Speed = GPIO_Speed_10MHz;
+    GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_UP;
 
     //K0 - PA6, A0 - PA5, B0 - PA4
@@ -32,6 +32,20 @@ void initEncoderGPIO() {
     //K1 - PB14, A1 - PB13, B1 - PB12
     GPIO_InitStruct.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14;
     GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+    GPIO_InitStruct.GPIO_Mode = GPIO_Mode_OUT;
+    GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_UP;
+    GPIO_InitStruct.GPIO_Pin = GPIO_Pin_11;
+    GPIO_Init(GPIOB, &GPIO_InitStruct);
+}
+
+void flash() {
+    if(GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_11)) {
+        GPIO_ResetBits(GPIOB, GPIO_Pin_11);
+    } else {
+        GPIO_SetBits(GPIOB, GPIO_Pin_11);
+    }
 }
 
 /**
@@ -42,7 +56,7 @@ void initEncoderNVIC() {
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE);
 
     NVIC_InitStruct.NVIC_IRQChannel = EXTI4_15_IRQn;
-    NVIC_InitStruct.NVIC_IRQChannelPriority = 3;
+    NVIC_InitStruct.NVIC_IRQChannelPriority = 0;
     NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
     NVIC_Init(&NVIC_InitStruct);
 }
@@ -72,24 +86,19 @@ void initEncoderEXTI() {
  * ±àÂëÆ÷0¼ì²â
  * */
 void readEncoder0Status() {
-
-    if(EXTI_GetITStatus(EXTI_Line6) != RESET) {
-        EXTI_ClearITPendingBit(EXTI_Line6);
-        if(!EncoderK0()) {
-            confirmArray[0] = TRUE;
-        }
+    if(!EncoderK0()) {
+        if(!EncoderK0()) confirmArray[0] = TRUE;
+        while (!EncoderK0()) delayInMilliSeconds(2);
     }
-    if(EXTI_GetITStatus(EXTI_Line5) != RESET) {
-        EXTI_ClearITPendingBit(EXTI_Line5);
-        if(!EncoderA0() && EncoderB0()) {
-            positionArray[0] --;
-        }
+    if(!EncoderA0() && EncoderB0()) {
+        if(!EncoderA0() && EncoderB0()) positionArray[0] --;
+        while (!EncoderA0()) delayInMilliSeconds(2);
+        while (!EncoderB0()) delayInMilliSeconds(2);
     }
-    if(EXTI_GetITStatus(EXTI_Line4) != RESET) {
-        EXTI_ClearITPendingBit(EXTI_Line4);
-        if(EncoderA0() && !EncoderB0()) {
-            positionArray[0] ++;
-        }
+    if(EncoderA0() && !EncoderB0()) {
+        if(EncoderA0() && !EncoderB0()) positionArray[0] ++;
+        while(!EncoderB0()) delayInMilliSeconds(2);
+        while(!EncoderA0()) delayInMilliSeconds(2);
     }
 }
 
@@ -97,25 +106,19 @@ void readEncoder0Status() {
  * ±àÂëÆ÷1¼ì²â
  * */
 void readEncoder1Status() {
-    if(EXTI_GetITStatus(EXTI_Line14) != RESET) {
-        EXTI_ClearITPendingBit(EXTI_Line14);
-        if(!EncoderK1()) {
-            confirmArray[1] = TRUE;
-        }
+    if(!EncoderK1()) {
+        if(!EncoderK1()) confirmArray[1] = TRUE;
+        while(!EncoderK1()) delayInMilliSeconds(2);
     }
-    if(EXTI_GetITStatus(EXTI_Line13) != RESET) {
-        EXTI_ClearITPendingBit(EXTI_Line13);
-        if(!EncoderA1() && EncoderB1()) {
-            positionArray[1] --;
-        }
-        while (!EncoderA1() && EncoderB1());
+    if(!EncoderA1() && EncoderB1()) {
+        if(!EncoderA1() && EncoderB1()) positionArray[1] --;
+        while(!EncoderA1()) delayInMilliSeconds(2);
+        while(!EncoderB1()) delayInMilliSeconds(2);
     }
-    if(EXTI_GetITStatus(EXTI_Line12) != RESET) {
-        EXTI_ClearITPendingBit(EXTI_Line12);
-        if(EncoderA1() && !EncoderB1()) {
-            positionArray[1] ++;
-        }
-        while (EncoderA1() && !EncoderB1());
+    if(EncoderA1() && !EncoderB1()) {
+        if(EncoderA1() && !EncoderB1()) positionArray[1] ++;
+        while(!EncoderB1()) delayInMilliSeconds(2);
+        while(!EncoderA1()) delayInMilliSeconds(2);
     }
 }
 
@@ -132,6 +135,4 @@ void readEncoderStatus() {
  * */
 void initEncoder() {
     initEncoderGPIO();
-    initEncoderNVIC();
-    initEncoderEXTI();
 }

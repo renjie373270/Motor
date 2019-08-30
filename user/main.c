@@ -1,8 +1,9 @@
 #include "main.h"
 
-static TaskHandle_t SegTask_Handle = NULL;
+static TaskHandle_t DisplayTask_Handle = NULL;
 static TaskHandle_t MotorTask_Handle = NULL;
 static TaskHandle_t WatchDogTask_Handle = NULL;
+static TaskHandle_t EncoderTask_Handle = NULL;
 
 void initAllDevices() {
     SystemInit();
@@ -15,7 +16,7 @@ void initAllDevices() {
 /**
  * 显示任务
  * */
-static void SegTask(void *parameter) {
+static void DisplayTask(void *parameter) {
     int8_t num1, num2;
     while (1) {
         num1 = positionArray[0];
@@ -33,7 +34,7 @@ static void SegTask(void *parameter) {
 }
 
 /**
- * 电机转动任务
+ * 电机转动任务y
  * */
 static void MotorTask(void *parameter) {
     while (1) {
@@ -50,11 +51,21 @@ static void WatchDogTask(void *parameter) {
     }
 }
 
+/**
+ * 编码器检测任务
+ * */
+static void EncoderTask(void *parameter) {
+    while (1) {
+        readEncoderStatus();
+    }
+}
+
 int main(void) {
     initAllDevices();
-    xTaskCreate(SegTask, "SegTask", 128, NULL, 200, &SegTask_Handle);
-    xTaskCreate(MotorTask, "MotorTask", 256, NULL, 200, &MotorTask_Handle);
-    xTaskCreate(WatchDogTask, "WatchDogTask", 128, NULL, 200, &WatchDogTask_Handle);
+    xTaskCreate(EncoderTask, "EncoderTask", 128, NULL, 200, &EncoderTask_Handle);
+    xTaskCreate(DisplayTask, "DisplayTask", 128, NULL, 199, &DisplayTask_Handle);
+    xTaskCreate(MotorTask,   "MotorTask", 128, NULL, 198, &MotorTask_Handle);
+    xTaskCreate(WatchDogTask, "WatchDogTask", 128, NULL, 197, &WatchDogTask_Handle);
     vTaskStartScheduler();
     while(1);
 }
