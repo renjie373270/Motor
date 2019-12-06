@@ -10,13 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b24b76b7-4d3d-4053-b234-cbd889ed7a77" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mylib/curtain.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mylib/curtain.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/motor.uvguix.Steven" beforeDir="false" afterPath="$PROJECT_DIR$/motor.uvguix.Steven" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/motor.uvoptx" beforeDir="false" afterPath="$PROJECT_DIR$/motor.uvoptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylib/encoder.c" beforeDir="false" afterPath="$PROJECT_DIR$/mylib/encoder.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylib/motor.c" beforeDir="false" afterPath="$PROJECT_DIR$/mylib/motor.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motor.uvprojx" beforeDir="false" afterPath="$PROJECT_DIR$/motor.uvprojx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/user/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/stm32f0xx_it.c" beforeDir="false" afterPath="$PROJECT_DIR$/user/stm32f0xx_it.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/user/main.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,149 +28,8 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylib/motor.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3119">
-              <caret line="125" column="28" selection-start-line="125" selection-start-column="28" selection-end-line="125" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylib/motor.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylib/encoder.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/user/stm32f0xx_it.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="71" column="1" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
-              <folding>
-                <element signature="e#1316#1341#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylib/encoder.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user/main.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="67" column="60" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>LED</find>
-      <find>uchar</find>
-      <find>unsigned char</find>
-      <find>u8</find>
-      <find>_nop</find>
-      <find>SEG</find>
-      <find>()</find>
-      <find>byte</find>
-      <find>[0]</find>
-      <find>sendBytesTo595</find>
-      <find>int8_t</find>
-      <find>A_Off</find>
-      <find>numberOfMotors</find>
-      <find>numberOfBytes</find>
-      <find>EXTI_PinSource12</find>
-      <find>EXTI_Line12</find>
-      <find>EncoderA</find>
-      <find>EncoderB</find>
-      <find>EncoderKe</find>
-      <find>()()</find>
-      <find>EXTI_GetITStatus(</find>
-      <find>xTaskCreate</find>
-      <find>clear</find>
-      <find>GPIO_Speed_10MHz</find>
-      <find>EXTI4_15_IRQn</find>
-      <find>EXTI_ClearFlag</find>
-      <find>EXTI_ClearITPendingBit(</find>
-      <find>GPIO_Speed_2MHz</find>
-      <find>GPIO_Mode_IN</find>
-      <find>GPIO_PuPd_UP</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>gpio</replace>
-      <replace>50</replace>
-      <replace>20</replace>
-      <replace>10</replace>
-      <replace>B_Off()</replace>
-      <replace>5</replace>
-      <replace>ST</replace>
-      <replace>uint8_t</replace>
-      <replace>MOTOR</replace>
-      <replace>(byte)</replace>
-      <replace>bytes[0]</replace>
-      <replace>[1]</replace>
-      <replace>sendBytesToMotor595</replace>
-      <replace>numberOfBytes</replace>
-      <replace>numberOf595</replace>
-      <replace>EncoderB0()</replace>
-      <replace>()</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/user/stm32f0xx_conf.h" />
-        <option value="$PROJECT_DIR$/user/system_stm32f0xx.c" />
-        <option value="$PROJECT_DIR$/CORE/core_cm0.h" />
-        <option value="$PROJECT_DIR$/mylib/led.h" />
-        <option value="$PROJECT_DIR$/user/stm32f0xx_it.h" />
-        <option value="$PROJECT_DIR$/FreeRTOS/port/RVDS/ARM_CM0/port.c" />
-        <option value="$PROJECT_DIR$/mylib/delay.c" />
-        <option value="$PROJECT_DIR$/mylib/delay.h" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/mylib/led.c" />
-        <option value="$PROJECT_DIR$/FreeRTOS/src/tasks.c" />
-        <option value="$PROJECT_DIR$/user/FreeRTOSConfig.h" />
-        <option value="$PROJECT_DIR$/user/main.h" />
-        <option value="$PROJECT_DIR$/mylib/motor.h" />
-        <option value="$PROJECT_DIR$/mylib/encoder.h" />
-        <option value="$PROJECT_DIR$/mylib/motor.c" />
-        <option value="$PROJECT_DIR$/mylib/display.c" />
-        <option value="$PROJECT_DIR$/mylib/display.h" />
-        <option value="$PROJECT_DIR$/user/main.c" />
-        <option value="$PROJECT_DIR$/mylib/encoder.c" />
-        <option value="$PROJECT_DIR$/user/stm32f0xx_it.c" />
-      </list>
-    </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
@@ -178,40 +38,9 @@
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="motor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="motor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="motor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="motor" type="462c0819:PsiDirectoryNode" />
-              <item name="mylib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="motor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="motor" type="462c0819:PsiDirectoryNode" />
-              <item name="startup" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="motor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="motor" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectId" id="1UbVFk6yimJdts5BwxkvOhed1kV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -262,305 +91,24 @@
       <workItem from="1566981374032" duration="4813000" />
       <workItem from="1567039745951" duration="26622000" />
       <workItem from="1567125816938" duration="8417000" />
+      <workItem from="1575625182408" duration="14000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88344000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20469083" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="SonarQube" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3275488" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/user/QN8036.C" />
-    <entry file="file://$PROJECT_DIR$/user/I2C.H" />
-    <entry file="file://$PROJECT_DIR$/FWlib/src/stm32f0xx_rtc.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="237" column="42" selection-start-line="237" selection-start-column="34" selection-end-line="237" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/stm32f0xx_conf.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="716">
-          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CORE/arm_math.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1146" selection-start-line="1146" selection-end-line="1146" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FWlib/src/stm32f0xx_misc.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="141" column="28" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FWlib/src/stm32f0xx_rcc.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="967" column="47" lean-forward="true" selection-start-line="967" selection-start-column="47" selection-end-line="967" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/system_stm32f0xx.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="84" column="23" lean-forward="true" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FWlib/inc/stm32f0xx_rcc.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="97" column="57" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/system_stm32f0xx.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="345" column="23" lean-forward="true" selection-start-line="345" selection-start-column="23" selection-end-line="345" selection-end-column="23" />
-          <folding>
-            <element signature="e#9901#10865#0" expanded="true" />
-            <element signature="e#11005#11113#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FWlib/inc/stm32f0xx_exti.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CORE/core_cm0.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="644" column="45" selection-start-line="644" selection-start-column="45" selection-end-line="644" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FWlib/src/stm32f0xx_gpio.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="282" column="29" selection-start-line="282" selection-start-column="8" selection-end-line="282" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylib/led.h" />
-    <entry file="file://$PROJECT_DIR$/user/stm32f0xx_it.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/startup_stm32f0xx_copy.lst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="109" column="48" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/startup/startup_stm32f0xx_copy.s" />
-    <entry file="file://$PROJECT_DIR$/FreeRTOS/port/RVDS/ARM_CM0/port.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="148" column="20" lean-forward="true" selection-start-line="148" selection-start-column="20" selection-end-line="148" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylib/delay.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreeRTOS/src/tasks.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-          <folding>
-            <element signature="e#19240#19350#0" expanded="true" />
-            <element signature="e#30654#33810#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylib/delay.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreeRTOS/include/FreeRTOS.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4725">
-          <caret line="189" column="48" selection-start-line="189" selection-start-column="48" selection-end-line="189" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreeRTOS/port/RVDS/ARM7_LPC21xx/portmacro.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2525">
-          <caret line="101" column="2" selection-start-line="101" selection-start-column="2" selection-end-line="101" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/FreeRTOSConfig.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="88" column="41" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="41" />
-          <folding>
-            <element signature="e#1886#1939#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreeRTOS/include/task.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="794">
-          <caret line="2061" column="89" selection-start-line="2061" selection-start-column="89" selection-end-line="2061" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylib/led.c" />
-    <entry file="file://$PROJECT_DIR$/user/main.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreeRTOS/include/stdint.readme">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/stm32f0xx.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="186" column="2" selection-start-line="186" selection-start-column="2" selection-end-line="186" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FWlib/inc/stm32f0xx_gpio.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="63" column="15" lean-forward="true" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FWlib/src/stm32f0xx_exti.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="253" selection-start-line="253" selection-end-line="254" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylib/display.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylib/motor.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3119">
-          <caret line="125" column="28" selection-start-line="125" selection-start-column="28" selection-end-line="125" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylib/motor.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylib/encoder.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylib/display.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="67" column="60" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylib/encoder.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/stm32f0xx_it.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="71" column="1" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
-          <folding>
-            <element signature="e#1316#1341#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

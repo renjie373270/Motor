@@ -12,6 +12,7 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "display.h"
+#include "curtain.h"
 
 
 #endif

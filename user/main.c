@@ -8,9 +8,28 @@ static TaskHandle_t EncoderTask_Handle = NULL;
 void initAllDevices() {
     SystemInit();
     delayInit();
-    initDisplayDevice();
-    initMotorGPIO();
-    initEncoder();
+//    initDisplayDevice();
+//    initMotorGPIO();
+//    initEncoder();
+    init_curtain();
+}
+
+static void TestTask(void *parameter) {
+    open_curtain();
+    delayInMilliSeconds(3000);
+    close_curtain();
+    delayInMilliSeconds(3000);
+    stop_curtain();
+    while (1) {
+        delayInMilliSeconds(1000);
+    }
+}
+
+int main() {
+    initAllDevices();
+    xTaskCreate(TestTask, "TestTask", 128, NULL, 200, NULL);
+    vTaskStartScheduler();
+    while(1);
 }
 
 /**
@@ -60,12 +79,12 @@ static void EncoderTask(void *parameter) {
     }
 }
 
-int main(void) {
-    initAllDevices();
-    xTaskCreate(EncoderTask, "EncoderTask", 128, NULL, 200, &EncoderTask_Handle);
-    xTaskCreate(DisplayTask, "DisplayTask", 128, NULL, 199, &DisplayTask_Handle);
-    xTaskCreate(MotorTask,   "MotorTask", 128, NULL, 198, &MotorTask_Handle);
-    xTaskCreate(WatchDogTask, "WatchDogTask", 128, NULL, 197, &WatchDogTask_Handle);
-    vTaskStartScheduler();
-    while(1);
-}
+//int main(void) {
+//    initAllDevices();
+//    xTaskCreate(EncoderTask, "EncoderTask", 128, NULL, 200, &EncoderTask_Handle);
+//    xTaskCreate(DisplayTask, "DisplayTask", 128, NULL, 199, &DisplayTask_Handle);
+//    xTaskCreate(MotorTask,   "MotorTask", 128, NULL, 198, &MotorTask_Handle);
+//    xTaskCreate(WatchDogTask, "WatchDogTask", 128, NULL, 197, &WatchDogTask_Handle);
+//    vTaskStartScheduler();
+//    while(1);
+//}

@@ -436,6 +436,11 @@
               <FileType>1</FileType>
               <FilePath>.\mylib\display.c</FilePath>
             </File>
+            <File>
+              <FileName>curtain.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\mylib\curtain.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
