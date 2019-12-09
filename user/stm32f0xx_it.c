@@ -78,7 +78,15 @@ void FLASH_IRQHandler(void){}
 void RCC_IRQHandler(void){}
 void EXTI0_1_IRQHandler(void){}
 void EXTI2_3_IRQHandler(void){}
-void EXTI4_15_IRQHandler(void){}
+
+//433MHz÷–∂œ
+void EXTI4_15_IRQHandler(void){
+
+    if(EXTI_GetITStatus(EXTI_Line12) != RESET) {
+        EXTI_ClearITPendingBit(EXTI_Line12);
+        rf_receive_data();
+    }
+}
 void TS_IRQHandler(void){}
 void DMA1_Channel1_IRQHandler(void){}
 void DMA1_Channel2_3_IRQHandler(void){}

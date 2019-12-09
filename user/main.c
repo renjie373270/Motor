@@ -15,12 +15,14 @@ void initAllDevices() {
     init_rf_gpio();
 }
 
+
+
 static void TestTask(void *parameter) {
-    uint8_t data_array[16] = {0}, i;
+    uint8_t data_array[4] = {0}, length = 0;
     while (1) {
-        rf_receive_data(data_array, 16);
+        length = rf_read_data(data_array);
         delayInMilliSeconds(10);
-        if(data_array[0] != 0) {
+        if(length > 0) {
             delayInMilliSeconds(1000);
             memset(data_array, 0x00, sizeof(data_array));
         }
