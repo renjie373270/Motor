@@ -11,17 +11,19 @@ void initAllDevices() {
 //    initDisplayDevice();
 //    initMotorGPIO();
 //    initEncoder();
-    init_curtain();
+//    init_curtain();
+    init_rf_gpio();
 }
 
 static void TestTask(void *parameter) {
-    open_curtain();
-    delayInMilliSeconds(3000);
-    close_curtain();
-    delayInMilliSeconds(3000);
-    stop_curtain();
+    uint8_t data_array[16] = {0}, i;
     while (1) {
-        delayInMilliSeconds(1000);
+        rf_receive_data(data_array, 16);
+        delayInMilliSeconds(10);
+        if(data_array[0] != 0) {
+            delayInMilliSeconds(1000);
+            memset(data_array, 0x00, sizeof(data_array));
+        }
     }
 }
 

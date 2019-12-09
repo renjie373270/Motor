@@ -20,7 +20,7 @@ void init_curtain_gpio() {
     gpio.GPIO_Pin  = GPIO_Pin_15;
     GPIO_Init(GPIOB, &gpio);
 
-    gpio.GPIO_Pin  = -GPIO_Pin_12;
+    gpio.GPIO_Pin  = GPIO_Pin_12;
     gpio.GPIO_OType= GPIO_OType_OD;
     gpio.GPIO_Speed= GPIO_Speed_50MHz;
     GPIO_Init(GPIOA, &gpio);

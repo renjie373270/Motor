@@ -441,6 +441,11 @@
               <FileType>1</FileType>
               <FilePath>.\mylib\curtain.c</FilePath>
             </File>
+            <File>
+              <FileName>rf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\mylib\rf.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

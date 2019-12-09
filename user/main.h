@@ -13,6 +13,7 @@
 #include "task.h"
 #include "display.h"
 #include "curtain.h"
+#include "rf.h"
 
 
 #endif
